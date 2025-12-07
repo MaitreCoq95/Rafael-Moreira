@@ -1,9 +1,21 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Shield, Truck, Building2, TrendingUp, Plane, Factory, X, Lightbulb } from "lucide-react"
+import { Shield, Truck, Building2, TrendingUp, Plane, Factory, X, Lightbulb, Briefcase } from "lucide-react"
+import { useTranslation } from "@/lib/i18n/useTranslation"
 
-const timeline = [
+const iconMap = {
+  Shield,
+  Truck,
+  Building2,
+  TrendingUp,
+  Plane,
+  Factory,
+  Lightbulb,
+  Briefcase,
+}
+
+const oldTimeline = [
   {
     period: "2017 – 2024",
     title: "Financial Controller France, Benelux, Germany",
@@ -343,9 +355,25 @@ function HoverCard({
 }
 
 export function TimelineSection() {
+  const { t } = useTranslation()
   const [visibleItems, setVisibleItems] = useState<number[]>([])
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  // Map translation data to timeline format with icons
+  const timeline = t.timeline.jobs.map((job, index) => ({
+    period: `${index === 0 ? '02/2025 – Atual' : index === 1 ? '04/2021 – 02/2025' : '12/2011 – 06/2020'}`,
+    title: job.title,
+    company: job.company,
+    icon: index === 0 ? Briefcase : index === 1 ? Building2 : TrendingUp,
+    description: job.description,
+    skills: [],
+    details: {
+      missions: job.achievements,
+      outils: [],
+      resultats: '',
+    },
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -379,9 +407,9 @@ export function TimelineSection() {
     <section id="timeline" className="py-20 bg-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Mon Parcours</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t.timeline.title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Plus de 10 ans d'expérience en Finance, Contrôle de Gestion et Pilotage de la Performance
+            {t.timeline.subtitle}
           </p>
           <p className="text-sm text-primary mt-2">Cliquez sur une expérience pour voir le détail des compétences</p>
         </div>

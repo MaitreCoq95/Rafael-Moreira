@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { motion } from "framer-motion"
 import { GraduationCap, Award, ShieldCheck, FileBadge, CheckCircle2, ScrollText } from "lucide-react"
