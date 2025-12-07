@@ -5,7 +5,6 @@ import { Menu, X, Linkedin, Mail, Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "@/lib/i18n/useTranslation"
 import { useLanguageContext } from "@/lib/i18n/LanguageContext"
-import Image from "next/image"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,21 +24,14 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Vyxo Logo */}
-          <a 
-            href="https://vyxoconsult.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          {/* Logo / Nome */}
+          <a
+            href="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <Image
-              src="/LOGO VYXO CONSULTING.png"
-              alt="Vyxo Consulting"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-              priority
-            />
+            <div className="text-lg font-bold text-foreground">
+              Rafael Moreira Ferreira
+            </div>
           </a>
 
           {/* Desktop Nav */}
@@ -66,10 +58,10 @@ export function Header() {
               <span>{language.toUpperCase()}</span>
             </button>
 
-            <a href="https://www.linkedin.com/in/nicolas-lemoine-32083417/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/rafaelmoreiraferreira/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
             </a>
-            <a href="mailto:nicolas.lemoine@vyxoconsult.com">
+            <a href="mailto:rmoreiracontato@yahoo.com">
               <Mail className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
             </a>
             <Button asChild>
@@ -108,14 +100,14 @@ export function Header() {
               className="flex items-center gap-2 px-3 py-2 rounded-md border border-border hover:border-primary hover:bg-primary/5 transition-all text-sm font-medium w-full"
             >
               <Languages className="w-4 h-4" />
-              <span>{language === 'fr' ? 'English' : 'Français'}</span>
+              <span>{language === 'pt' ? 'English' : 'Português'}</span>
             </button>
 
             <div className="flex items-center gap-4 pt-4 border-t border-border">
-              <a href="https://www.linkedin.com/in/nicolas-lemoine-32083417/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/rafaelmoreiraferreira/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
-              <a href="mailto:nicolas.lemoine@vyxoconsult.com">
+              <a href="mailto:rmoreiracontato@yahoo.com">
                 <Mail className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
             </div>
