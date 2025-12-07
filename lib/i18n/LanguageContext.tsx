@@ -12,14 +12,14 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('fr')
+  const [language, setLanguageState] = useState<Language>('pt')
   const [mounted, setMounted] = useState(false)
 
   // Load language from localStorage on mount
   useEffect(() => {
     setMounted(true)
     const savedLanguage = localStorage.getItem('language') as Language
-    if (savedLanguage && (savedLanguage === 'fr' || savedLanguage === 'en')) {
+    if (savedLanguage && (savedLanguage === 'pt' || savedLanguage === 'en')) {
       setLanguageState(savedLanguage)
     }
   }, [])
@@ -33,7 +33,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }
 
   const toggleLanguage = () => {
-    const newLang = language === 'fr' ? 'en' : 'fr'
+    const newLang = language === 'pt' ? 'en' : 'pt'
     setLanguage(newLang)
   }
 

@@ -9,9 +9,9 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Nicolas Lemoine | Chief Performance & Finance Strategist | Vyxo Consulting",
+  title: "Rafael Moreira Ferreira | Gerente Sênior de Processos, Qualidade e Planejamento",
   description:
-    "Expert en contrôle de gestion, pilotage de la performance et optimisation financière. Finance prédictive, IA finance, automatisation reporting, data quality audit, Power BI, Excel avancé. Services premium : reporting automatisé par IA, modélisation financière prédictive, Vyxo Data Quality Scan™.",
+    "+20 anos de excelência em Gestão de Processos, Qualidade, Lean Seis Sigma e Operações. Experiência internacional (França/EUA). Especialista em SGI (ISO 9001, 14001, 45001, IATF), Planejamento Estratégico, BPMN, Auditorias e Lean Black Belt. Auditor Líder certificado.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr">
+    <html lang="pt">
       <body className={`font-sans antialiased`}>
         <LanguageProvider>
           {children}
