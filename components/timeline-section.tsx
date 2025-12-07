@@ -15,134 +15,6 @@ const iconMap = {
   Briefcase,
 }
 
-const oldTimeline = [
-  {
-    period: "2017 – 2024",
-    title: "Financial Controller France, Benelux, Germany",
-    company: "Atradius",
-    icon: TrendingUp,
-    description:
-      "Pilotage financier multi-pays : budgeting, forecasting, dashboards stratégiques COMEX/CODIR, cost control, variance analysis, data governance. Business Analyst sur projet digital paneuropéen > 50M€.",
-    skills: [
-      { name: "Budgeting & Forecasting", value: 95 },
-      { name: "Cost Control", value: 90 },
-      { name: "Variance Analysis", value: 95 },
-      { name: "Dashboard Design", value: 90 },
-      { name: "Data Governance", value: 85 },
-    ],
-    details: {
-      missions: [
-        "Préparation budgétaire et forecasting sur 3 zones géographiques",
-        "Conception de dashboards stratégiques pour Comex/Codir",
-        "Contrôle des coûts et optimisation des marges",
-        "Mise en place de standards comptables & data governance",
-        "Business Analyst sur projet digital > 50M€",
-        "Chef de budget pour le programme digital Europe",
-      ],
-      outils: ["Power BI", "SAP", "Excel Expert", "Access", "Power Pivot"],
-      resultats: "Standardisation financière 3 pays, pilotage budgétaire projet 50M€, réduction coûts opérationnels -8%",
-    },
-  },
-  {
-    period: "2017",
-    title: "Bond Account Manager",
-    company: "Atradius",
-    icon: Shield,
-    description: "Gestion de portefeuille IDF/NE, analyse de risques, reporting stratégique, relation clients corporate.",
-    skills: [
-      { name: "Analyse Risques", value: 85 },
-      { name: "Gestion Portefeuille", value: 90 },
-      { name: "Reporting Stratégique", value: 85 },
-      { name: "Relation Client", value: 80 },
-      { name: "Credit Management", value: 85 },
-    ],
-    details: {
-      missions: [
-        "Analyse de risques financiers",
-        "Gestion de portefeuille clients IDF/NE",
-        "Reporting stratégique mensuel",
-      ],
-      outils: ["Excel", "CRM", "Outils d'analyse risques"],
-      resultats: "Optimisation du portefeuille, amélioration des processus de reporting",
-    },
-  },
-  {
-    period: "2014 – 2017",
-    title: "Financial Analyst",
-    company: "Barclays",
-    icon: Building2,
-    description: "Analyse financière, construction d'outils de pilotage, reporting mensuel, analyse coûts complets.",
-    skills: [
-      { name: "Analyse Financière", value: 90 },
-      { name: "Modélisation Excel", value: 95 },
-      { name: "Reporting Financier", value: 85 },
-      { name: "Analyse Coûts", value: 85 },
-      { name: "Tableaux de Bord", value: 90 },
-    ],
-    details: {
-      missions: [
-        "Construction d'outils financiers automatisés",
-        "Analyse coûts complets",
-        "Reporting mensuel direction",
-        "Optimisation des processus financiers",
-      ],
-      outils: ["Excel VBA", "Access", "SAP", "Business Objects"],
-      resultats: "Automatisation du reporting mensuel, gain de temps +40%, fiabilité accrue des données",
-    },
-  },
-  {
-    period: "2012 – 2014",
-    title: "Contrôleur de Gestion",
-    company: "LBMG Worklabs",
-    icon: Factory,
-    description: "Contrôle de gestion opérationnel, suivi budgétaire, analyse des écarts, tableaux de bord automatisés.",
-    skills: [
-      { name: "Contrôle de Gestion", value: 90 },
-      { name: "Suivi Budgétaire", value: 90 },
-      { name: "Analyse Écarts", value: 85 },
-      { name: "Automatisation", value: 80 },
-      { name: "KPIs Opérationnels", value: 85 },
-    ],
-    details: {
-      missions: [
-        "Suivi budgétaire mensuel",
-        "Analyse des écarts et variance analysis",
-        "Création de tableaux de bord automatisés",
-        "Support décisionnel direction",
-      ],
-      outils: ["Excel", "Access", "ERP", "Tableaux de bord"],
-      resultats: "Mise en place d'un système de pilotage complet, amélioration de la visibilité financière",
-    },
-  },
-  {
-    period: "2024 – Aujourd'hui",
-    title: "Performance & Finance Strategist",
-    company: "Vyxo Consulting - Partner",
-    icon: Lightbulb,
-    description:
-      "Conseil en pilotage de la performance financière : structuration budgétaire, optimisation des coûts, mise en place d'outils de pilotage (Power BI, Excel), audit de la donnée financière, support COMEX/CODIR.",
-    skills: [
-      { name: "Consulting Finance", value: 95 },
-      { name: "Structuration Budget", value: 95 },
-      { name: "Optimisation Coûts", value: 90 },
-      { name: "Digital Finance", value: 95 },
-      { name: "Support COMEX", value: 90 },
-    ],
-    details: {
-      missions: [
-        "Pilotage de la performance financière",
-        "Optimisation des coûts et rentabilité",
-        "Mise en place d'outils de pilotage Power BI",
-        "Audit et fiabilisation de la donnée financière",
-        "Structuration budgétaire et forecasting",
-        "Support décisionnel COMEX/CODIR",
-      ],
-      outils: ["Power BI", "Excel Expert", "Power Pivot", "SAP", "R Studio", "Qlikview"],
-      resultats: "+12% fiabilité reporting, -8% coûts opérationnels, 3 pays harmonisés, 30+ dashboards déployés",
-    },
-  },
-]
-
 function RadarChart({ skills, isVisible }: { skills: { name: string; value: number }[]; isVisible: boolean }) {
   const size = 220 // Increased size to accommodate labels
   const center = size / 2
@@ -297,28 +169,32 @@ function HoverCard({
             </div>
           </div>
 
-          {/* Radar Chart */}
-          <div className="mb-4">
-            <RadarChart skills={item.skills} isVisible={isVisible} />
-          </div>
-
-          {/* Skills with progress bars */}
-          <div className="grid grid-cols-1 gap-2 mb-4">
-            {item.skills.map((skill, i) => (
-              <div key={i}>
-                <div className="flex justify-between text-xs mb-1">
-                  <span className="text-muted-foreground">{skill.name}</span>
-                  <span className="text-primary font-medium">{skill.value}%</span>
-                </div>
-                <div className="h-2 bg-muted rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-primary rounded-full transition-all duration-700"
-                    style={{ width: isVisible ? `${skill.value}%` : "0%" }}
-                  />
-                </div>
+          {/* Radar Chart - only show if skills exist */}
+          {item.skills.length > 0 && (
+            <>
+              <div className="mb-4">
+                <RadarChart skills={item.skills} isVisible={isVisible} />
               </div>
-            ))}
-          </div>
+
+              {/* Skills with progress bars */}
+              <div className="grid grid-cols-1 gap-2 mb-4">
+                {item.skills.map((skill, i) => (
+                  <div key={i}>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-muted-foreground">{skill.name}</span>
+                      <span className="text-primary font-medium">{skill.value}%</span>
+                    </div>
+                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-primary rounded-full transition-all duration-700"
+                        style={{ width: isVisible ? `${skill.value}%` : "0%" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
 
           {/* Details */}
           <div className="space-y-3 text-sm">
@@ -333,20 +209,24 @@ function HoverCard({
                 ))}
               </ul>
             </div>
-            <div>
-              <span className="text-primary font-semibold">Outils :</span>
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                {item.details.outils.map((o, i) => (
-                  <span key={i} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">
-                    {o}
-                  </span>
-                ))}
+            {item.details.outils && item.details.outils.length > 0 && (
+              <div>
+                <span className="text-primary font-semibold">Outils :</span>
+                <div className="flex flex-wrap gap-1.5 mt-1">
+                  {item.details.outils.map((o, i) => (
+                    <span key={i} className="px-2 py-1 bg-primary/10 text-primary rounded-md text-xs font-medium">
+                      {o}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="pt-3 border-t border-border">
-              <span className="text-primary font-semibold">Résultats :</span>
-              <p className="text-muted-foreground mt-1">{item.details.resultats}</p>
-            </div>
+            )}
+            {item.details.resultats && (
+              <div className="pt-3 border-t border-border">
+                <span className="text-primary font-semibold">Résultats :</span>
+                <p className="text-muted-foreground mt-1">{item.details.resultats}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -460,23 +340,25 @@ export function TimelineSection() {
                     <p className="text-muted-foreground text-sm mt-1">{item.company}</p>
                     <p className="text-muted-foreground mt-3 text-sm leading-relaxed">{item.description}</p>
 
-                    {/* Mobile preview */}
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <div className="grid grid-cols-2 gap-2">
-                        {item.skills.slice(0, 4).map((skill, i) => (
-                          <div key={i} className="text-xs">
-                            <div className="flex justify-between mb-1">
-                              <span className="text-muted-foreground truncate">{skill.name}</span>
-                              <span className="text-primary">{skill.value}%</span>
+                    {/* Mobile preview - only show if skills exist */}
+                    {item.skills.length > 0 && (
+                      <div className="mt-4 pt-4 border-t border-border">
+                        <div className="grid grid-cols-2 gap-2">
+                          {item.skills.slice(0, 4).map((skill, i) => (
+                            <div key={i} className="text-xs">
+                              <div className="flex justify-between mb-1">
+                                <span className="text-muted-foreground truncate">{skill.name}</span>
+                                <span className="text-primary">{skill.value}%</span>
+                              </div>
+                              <div className="h-1 bg-muted rounded-full">
+                                <div className="h-full bg-primary rounded-full" style={{ width: `${skill.value}%` }} />
+                              </div>
                             </div>
-                            <div className="h-1 bg-muted rounded-full">
-                              <div className="h-full bg-primary rounded-full" style={{ width: `${skill.value}%` }} />
-                            </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
+                        <p className="text-xs text-primary/70 mt-2 text-center">Cliquez pour voir plus</p>
                       </div>
-                      <p className="text-xs text-primary/70 mt-2 text-center">Cliquez pour voir plus</p>
-                    </div>
+                    )}
                   </div>
                 </div>
 
