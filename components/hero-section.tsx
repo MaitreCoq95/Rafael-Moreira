@@ -8,14 +8,14 @@ export function HeroSection() {
   const { t } = useTranslation()
 
   const badges = [
-    "Excel Expert",
-    "Power BI",
-    "SAP",
-    "Budgeting & Forecasting",
-    "Cost Control",
-    "Business Analysis",
-    "Data Quality",
-    "Financial Reporting"
+    "ISO 9001/14001/45001",
+    "Lean Six Sigma",
+    "BPMN",
+    "Auditorias",
+    "Planejamento Estratégico",
+    "KPIs & SLAs",
+    "Gestão de Processos",
+    "Melhoria Contínua"
   ]
 
   return (
@@ -69,8 +69,8 @@ export function HeroSection() {
               {/* Image container */}
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-2 border-primary/30">
                 <img
-                  src="/nicolas-lemoine-profile.png"
-                  alt="Nicolas Lemoine - Chief Performance & Finance Strategist"
+                  src="/Rafael Moreira.png"
+                  alt="Rafael Moreira Ferreira - Gerente Sênior de Processos, Qualidade e Planejamento"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -79,11 +79,11 @@ export function HeroSection() {
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">10+</span>
+                    <span className="text-2xl font-bold text-primary">20+</span>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-foreground">{t.hero.stats.experience}</p>
-                    <p className="text-xs text-muted-foreground">Finance & Data</p>
+                    <p className="text-xs text-muted-foreground">Processos & Qualidade</p>
                   </div>
                 </div>
               </div>
@@ -91,11 +91,11 @@ export function HeroSection() {
               <div className="absolute -top-6 -right-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">3</span>
+                    <span className="text-2xl font-bold text-primary">2</span>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-foreground">{t.hero.stats.countries}</p>
-                    <p className="text-xs text-muted-foreground">FR/BE/DE</p>
+                    <p className="text-xs text-muted-foreground">FR/EUA</p>
                   </div>
                 </div>
               </div>
