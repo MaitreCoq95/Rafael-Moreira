@@ -567,8 +567,8 @@ export const translations: Record<Language, Translations> = {
       },
       contact: {
         title: 'Contato',
-        email: 'rafael.moreira@exemplo.com',
-        phone: '(48) 98808-6888',
+        email: 'rmoreiracontato@yahoo.com',
+        phone: '+55 48 988086888',
         linkedin: 'LinkedIn',
       },
       legal: {
@@ -977,8 +977,8 @@ export const translations: Record<Language, Translations> = {
       },
       contact: {
         title: 'Contact',
-        email: 'rafael.moreira@example.com',
-        phone: '(48) 98808-6888',
+        email: 'rmoreiracontato@yahoo.com',
+        phone: '+55 48 988086888',
         linkedin: 'LinkedIn',
       },
       legal: {

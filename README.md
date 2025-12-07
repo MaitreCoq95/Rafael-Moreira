@@ -69,9 +69,9 @@ Rafael-Moreira/
 
 ## Contato
 
-- **Email**: rafael.moreira@exemplo.com
-- **Telefone**: (48) 98808-6888
-- **LinkedIn**: [Rafael Moreira Ferreira](https://www.linkedin.com/in/rafael-moreira-ferreira/)
+- **Email**: rmoreiracontato@yahoo.com
+- **Telefone**: +55 48 988086888
+- **LinkedIn**: [Rafael Moreira Ferreira](https://www.linkedin.com/in/rafaelmoreiraferreira/)
 
 ## Desenvolvido com
 
