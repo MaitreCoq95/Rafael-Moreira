@@ -20,18 +20,16 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      {/* Temporarily commenting to find problematic component */}
-      {/* <ServicesSection />
+      <ServicesSection />
       <PremiumServicesSection />
       <TimelineSection />
       <BeforeAfterSection />
       <ROISection />
-      <WhyMeSection />
+      {/* Testing second half */}
+      {/* <WhyMeSection />
       <MethodSection />
       <SkillsSection />
       <DiplomasSection />
-
-
       <TestimonialsSection />
       <DNASection />
       <CTASection />
