@@ -20,7 +20,8 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <HeroSection />
-      <ServicesSection />
+      {/* Temporarily commenting to find problematic component */}
+      {/* <ServicesSection />
       <PremiumServicesSection />
       <TimelineSection />
       <BeforeAfterSection />
@@ -34,8 +35,8 @@ export default function Home() {
       <TestimonialsSection />
       <DNASection />
       <CTASection />
+      <FloatingCTA /> */}
       <Footer />
-      <FloatingCTA />
     </main>
   )
 }
