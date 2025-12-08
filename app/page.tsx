@@ -29,11 +29,12 @@ export default function Home() {
       <MethodSection />
       <SkillsSection />
       <DiplomasSection />
-      <TestimonialsSection />
+      {/* Testing remaining components */}
+      {/* <TestimonialsSection />
       <DNASection />
       <CTASection />
+      <FloatingCTA /> */}
       <Footer />
-      <FloatingCTA />
     </main>
   )
 }
