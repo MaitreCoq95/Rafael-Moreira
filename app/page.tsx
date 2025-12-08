@@ -27,10 +27,10 @@ export default function Home() {
       <ROISection />
       <WhyMeSection />
       <MethodSection />
-      <SkillsSection />
+      {/* Testing SkillsSection and DiplomasSection */}
+      {/* <SkillsSection />
       <DiplomasSection />
-      {/* Testing remaining components */}
-      {/* <TestimonialsSection />
+      <TestimonialsSection />
       <DNASection />
       <CTASection />
       <FloatingCTA /> */}
