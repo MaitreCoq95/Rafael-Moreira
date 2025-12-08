@@ -26,15 +26,14 @@ export default function Home() {
       <BeforeAfterSection />
       <ROISection />
       <WhyMeSection />
-      {/* Testing MethodSection alone */}
-      {/* <MethodSection />
+      <MethodSection />
       <SkillsSection />
       <DiplomasSection />
       <TestimonialsSection />
       <DNASection />
       <CTASection />
-      <FloatingCTA /> */}
       <Footer />
+      <FloatingCTA />
     </main>
   )
 }

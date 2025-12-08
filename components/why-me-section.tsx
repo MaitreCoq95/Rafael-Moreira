@@ -1,12 +1,12 @@
 'use client'
 
-import { Globe, Users, Cpu, Rocket } from "lucide-react"
+import { Globe, Users, Cpu, Rocket, Target, TrendingUp, UsersRound, Award } from "lucide-react"
 import { useTranslation } from "@/lib/i18n/useTranslation"
 
 export function WhyMeSection() {
   const { t } = useTranslation()
 
-  const icons = [Globe, Users, Cpu, Rocket]
+  const icons = [Target, Cpu, Award, TrendingUp, Rocket, TrendingUp, UsersRound, Globe]
 
   return (
     <section className="py-20">
