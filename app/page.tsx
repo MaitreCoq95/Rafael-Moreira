@@ -26,9 +26,9 @@ export default function Home() {
       <BeforeAfterSection />
       <ROISection />
       <WhyMeSection />
-      <MethodSection />
-      {/* Testing SkillsSection and DiplomasSection */}
-      {/* <SkillsSection />
+      {/* Testing MethodSection alone */}
+      {/* <MethodSection />
+      <SkillsSection />
       <DiplomasSection />
       <TestimonialsSection />
       <DNASection />
