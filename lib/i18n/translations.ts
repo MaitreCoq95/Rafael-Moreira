@@ -141,6 +141,13 @@ export interface Translations {
       text: string
     }>
   }
+  dna: {
+    title: string
+    traits: Array<{
+      title: string
+      description: string
+    }>
+  }
   cta: {
     title: string
     subtitle: string
@@ -533,6 +540,23 @@ export const translations: Record<Language, Translations> = {
           role: 'Diretoria',
           company: 'COTESA Engenharia',
           text: 'Manutenção impecável da conformidade SGI com revisão estratégica de missão, visão e valores, e implementação de cultura de melhoria contínua.',
+        },
+      ],
+    },
+    dna: {
+      title: 'Meu DNA',
+      traits: [
+        {
+          title: 'Excelência Operacional + Prática',
+          description: 'Sem teoria, apenas resultados concretos e impacto mensurável',
+        },
+        {
+          title: 'Liderança Calma e Estruturada',
+          description: 'Orientado para decisões, pedagógico e diplomata',
+        },
+        {
+          title: 'Digitalização e Inovação',
+          description: 'Gestão de processos e qualidade de nova geração',
         },
       ],
     },
@@ -943,6 +967,23 @@ export const translations: Record<Language, Translations> = {
           role: 'Board of Directors',
           company: 'COTESA Engineering',
           text: 'Impeccable IMS compliance maintenance with strategic review of mission, vision, and values, and implementation of continuous improvement culture.',
+        },
+      ],
+    },
+    dna: {
+      title: 'My DNA',
+      traits: [
+        {
+          title: 'Operational Excellence + Hands-On',
+          description: 'No theory, only concrete results and measurable impact',
+        },
+        {
+          title: 'Calm and Structured Leadership',
+          description: 'Decision-oriented, pedagogical and diplomatic',
+        },
+        {
+          title: 'Digitalization and Innovation',
+          description: 'Next-generation process and quality management',
         },
       ],
     },

@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Eye } from "lucide-react"
+import { Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "@/lib/i18n/useTranslation"
 
@@ -17,7 +17,7 @@ export function CTASection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="tel:+33600000000">
+            <a href="tel:+5548988086888">
               <Phone className="mr-2 h-4 w-4" />
               {t.cta.button}
             </a>
@@ -28,8 +28,8 @@ export function CTASection() {
             className="border-border text-foreground hover:bg-secondary bg-transparent"
             asChild
           >
-            <a href="mailto:nicolas.lemoine@vyxoconsult.com">
-              <Eye className="w-4 h-4 mr-2" />
+            <a href="mailto:rmoreiracontato@yahoo.com">
+              <Mail className="w-4 h-4 mr-2" />
               Email
             </a>
           </Button>
